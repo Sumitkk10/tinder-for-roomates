@@ -29,9 +29,18 @@ def search():
         cursor = db.cursor()
         cursor.execute('''SELECT password FROM members WHERE email =?''', (mail,))
         x = cursor.fetchall()
-        print(x)
-        db.close()
-        return "Email exists"
+        if(len(x) != 0):
+            if(x[0][0] == password):
+                db.close()
+                # redirect to search page
+                return "Email exists"
+            else:
+                db.close()
+                # put a message for wrong password
+                return "Wrong Password"
+        else:
+            # put a message for Sign up 
+            return "Email does not exist"
     else:
         db = sqlite3.connect('temp.db')
         cursor = db.cursor()
