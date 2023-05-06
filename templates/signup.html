@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Login </title>
+        <title> Signup </title>
         <link rel="stylesheet" href="../static/login.css">
     </head>
     <body bgcolor="lightblue">
         <div class ="box">
             <img src = "https://colorlib.com/etc/lf/Login_v1/images/img-01.png", style="width: 350px;">
-            <div class = "text"> Member Login </div>
-            <form method="POST" action="/loginn" class="form-container">
+            <div class = "text"> Member Signup </div>
+            <form method="POST" action="/signupp" class="form-container">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
-                
                 {% if error %}
                     <p style="color: red">{{ error_msg }}</p>
                 {% endif %}
-                
-                <input type="submit" value="Log in">
+                <input type="submit" value="Sign Up">
             </form>
         </div>
     </body>
