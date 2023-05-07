@@ -46,7 +46,7 @@
 
     The application can be accessed by running the flask application app.py. The server link obtained will redirect to the homepage of the website from where other pages can be accessed according to the buttons and links present.
     
-  Running this web application on someone else's computer assumes the following conditions:
+     Running this web application on someone else's computer assumes the following conditions:
   ```
     i) The screen resolution assumed is 1920x1080.
     ii) The operating system used is Ubuntu.
