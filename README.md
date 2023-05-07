@@ -20,7 +20,7 @@
     
         i) Created an algorithm to display the matched percentage of two particular entries.
         
-        ii) We have also included a login and sign-up page so that if the user is not registered is redirected to the form else the matching roommate results are displayed.
+        ii) We have also included a login and sign-up page so that if the user is not registered, he/she is redirected to the form else the matching roommate results are displayed directly.
         
     c) Our website displays all the possible roomates of the same gender that a person can have such that with whom he/she has the highest matched percentage is displayed first.
     
