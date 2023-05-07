@@ -9,37 +9,39 @@
     <form style="font-family:  'Poly', serif;font-size: 20px;" method="POST" action="/register">
         <p class="headings" style="font-size:35px;font-family: 'Audiowide', sans-serif;">Personal Details</p>
       <label for="name">Name </label>
-      <input type="text" id="textbox" name="name"/><br /><br />
+      <input type="text" id="textbox" name="name" required/><br /><br />
+      <label for="name">Photograph(Google drive link) </label>
+      <input type="text" id="textbox" name="image"/><br /><br />
       <!-- <label for="branch">Branch</label>
       <input type="text" id="textbox" /><br /><br /> -->
-      <label for="branch">Branch </label>
-      <select id="car" name="branch">
+      <label for="branch" >Branch </label>
+      <select id="car" name="branch" required>
         <!-- <option value="">Choose a time</option> -->
-        <option value="CSE">CSE</option>
-        <option value="ECE">ECE</option>
-        <option value="CSD">CSD</option>
-        <option value="CLD">CLD</option>
-        <option value="CND">CND</option>
-        <option value="CHD">CHD</option>
-        <option value="ECD">ECD</option>
+        <option value="Computer Science Engineering">Computer Science Engineering</option>
+        <option value="Chemical Engineering">Chemical Engineering</option>
+        <option value="Electrical Engineering">Electrical Engineering</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Civil Engineering">Civil Engineering</option>
+        <!-- <option value="CHD">CHD</option>
+        <option value="ECD">ECD</option> -->
       </select><br><br>
-      <label for="cg">CG </label>
+      <label for="cg" required>CG </label>
        <input type="text" id="textbox_cg" name="cg"/><br /><br />
       <!-- <label for="email">Email Id</label>
       <input type="text" id="textbox" /><br /><br /> -->
       <p style="margin-left: 2%; font-family: 'Chakra Petch', sans-serif;">
         Gender :
-        <input type="radio" name="Gender" value="Male" />
+        <input type="radio" name="gender" value="Male" required/>
         <label for="male" class="radio_button">Male</label>
-        <input type="radio" name="Gender" value="Female" />
+        <input type="radio" name="gender" value="Female" required/>
         <label for="female" class="radio_button">Female</label><br />
       </p>
       <label for="age">Age </label>
-      <input type="text" id="textbox_age" name="age"/><br /><br />
+      <input type="text" id="textbox_age" name="age"required/><br /><br />
       <p style="font-size:35px;font-family: 'Audiowide', sans-serif;" class="headings">Lifestyle</p>
       <!-- <p style="font-size:25px;">Sleep Schedule</p> -->
       <label for="sleeptime">When do you go to bed?</label>
-      <select id="ca" name="sleeptime">
+      <select id="ca" name="sleeptime"required>
        
         <!-- <option value="">Choose a time</option> -->
         <option value="8PM-9PM">8PM-9PM</option>
@@ -55,7 +57,7 @@
    
       <br /> <br /> <br>
       <label for="sleeptime">When do you go wake up?</label>
-      <select id="cars" name="wakeup" class="radio_button">
+      <select id="cars" name="wakeup" class="radio_button" required>
         <!-- <option value="">Choose a time</option> -->
         <option value="3AM-4AM">3AM-4AM</option>
         <option value="4AM-5AM">4AM-5AM</option>
@@ -68,63 +70,65 @@
       <br /><br>
       <p style="margin-left: 2%; font-family: 'Chakra Petch', sans-serif;">
         How neat organised are you?<br><br>
-        <input type="radio" name="organised" value="1" />
+        <input type="radio" name="organised" value="Very disorganized" required />
         <label for="1" class="radio_button_1">1</label>
-        <input type="radio" name="organised" value="2" />
+        <input type="radio" name="organised" value="Slightly disorganized" required/>
         <label for="2" class="radio_button_1">2</label>
-        <input type="radio" name="organised" value="3" />
+        <input type="radio" name="organised" value="Somewhat organized" required/>
         <label for="3" class="radio_button_1">3</label>
-        <input type="radio" name="organised" value="4" />
+        <input type="radio" name="organised" value="Mostly organized" required/>
         <label for="4" class="radio_button_1">4</label>
-        <input type="radio" name="organised" value="5" />
+        <input type="radio" name="organised" value="Extremely organized" required/>
         <label for="5" class="radio_button_1">5</label>
       </p>
       <p style="margin-left: 2%; font-family: 'Chakra Petch', sans-serif;"><br>
         Do you like socialising?<br><br>
-        <input type="radio" name="social" value="1" />
+        <input type="radio" name="social" value="Social" required/>
         <label for="1" class="radio_button">Yes</label>
-        <input type="radio" name="social" value="2" />
+        <input type="radio" name="social" value="Not very social" required />
         <label for="2" class="radio_button">No</label><br><br>
        </p>
     <p style="margin-left: 2%; font-family: 'Chakra Petch', sans-serif;">
        Are you comfortable with noise when studying or relaxing?<br><br>
-       <input type="radio" name="noise" value="1" />
+       <input type="radio" name="noise" value="Comfortable with noise when studying or relaxing?" required />
        <label for="1" class="radio_button">Yes</label>
-       <input type="radio" name="noise" value="2" />
+       <input type="radio" name="noise" value="Not comfortable with noise when studying or relaxing?" required/>
        <label for="2" class="radio_button" >No</label><br><br></p>
       <p style="margin-left: 2%; font-family: 'Chakra Petch', sans-serif;">
         Do you have any smoking or drinking habits?<br><br>
-        <input type="radio" name="smoke" value="1" />
+        <input type="radio" name="smoke" value="Smoker" required/>
         <label for="1" class="radio_button">Yes</label>
-        <input type="radio" name="smoke" value="2" />
+        <input type="radio" name="smoke" value="Non-smoker" required />
         <label for="2" class="radio_button">No</label><br><br>
        </p>
        <p style="margin-left: 2%; font-family: 'Chakra Petch', sans-serif;">
         Do you have any medications or allergies? <br><br>
-        <input type="radio" name="medications" value="1" />
+        <input type="radio" name="medications" value="Doesn't have any medication or allergies" required/>
         <label for="1" class="radio_button">Yes</label>
-        <input type="radio" name="medications" value="2" />
+        <input type="radio" name="medications" value="Has medication or allergies" required/>
         <label for="2" class="radio_button">No</label><br><br>
        </p>
        <p style="font-size:35px;font-family: 'Audiowide', sans-serif;" class="headings">Preferences</p>
-       <label for="cg">Preferred CG of roommate</label>
-      <input type="text" id="textbox_cg" name="cg_p"/><br /><br />
+       <label for="cg">Preferred Minimum CG of roommate</label>
+      <input type="text" id="textbox_cg" name="cg_p" required/><br /><br />
     </p>
+    <label for="cg">Preferred Maximum CG of roommate</label>
+    <input type="text" id="textbox_cg" name="cg_p_max" required/><br /><br />
+  </p>
         <label for="branch">Preferred branch of roommate</label>
-        <select id="car" name="branch_p">
+        <select id="car" name="branch_p" required>
           <!-- <option value="">Choose a time</option> -->
-          <option value="CSE">CSE</option>
-          <option value="ECE">ECE</option>
-          <option value="CSD">CSD</option>
-          <option value="CLD">CLD</option>
-          <option value="CND">CND</option>
-          <option value="CHD">CHD</option>
-          <option value="ECD">ECD</option>
+          <option value="Computer Science Engineering">Computer Science Engineering</option>
+          <option value="Chemical Engineering">Chemical Engineering</option>
+          <option value="Electrical Engineering">Electrical Engineering</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Civil Engineering">Civil Engineering</option>
+          <option value="Any">Any</option>
         </select><br><br><p style="margin-left: 2%; font-family: 'Chakra Petch', sans-serif;">
       Would you prefer to have a roommate with any smoking or drinking habits?<br><br>
-      <input type="radio" name="smoke_p" value="1" />
+      <input type="radio" name="smoke_p" value="Smoker" required />
       <label for="1" class="radio_button">Yes</label>
-      <input type="radio" name="smoke_p" value="2" />
+      <input type="radio" name="smoke_p" value="Non-smoker " required/>
       <label for="2" class="radio_button">No</label><br><br>
      </p>
      <!-- Would you be comfortable if there is noise when studying or relaxing?<br><br>

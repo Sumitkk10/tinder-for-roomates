@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello() -> str:
-    return "WELCOME TO ROOMATE FINDER"
+    return render_template('home.html')
 
 mail=""
 
@@ -50,6 +50,7 @@ def loginn():
 
 @app.route('/signup')
 def signup():
+    print("YES")
     return render_template('signup.html')
 
 @app.route('/signupp', methods=['POST'])
@@ -88,12 +89,10 @@ def signupp():
         db.commit()
         db.close()
         return render_template('form.html')
-
-
+    
 @app.route('/form')
 def form():
     return render_template('form.html')
-
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -102,6 +101,7 @@ def register():
     global mail
     db = sqlite3.connect('temp.db')
     name = request.form['name']
+    image = request.form['image']
     branch = request.form['branch']
     cg = request.form['cg']
     gender = request.form.get('gender')
@@ -114,12 +114,13 @@ def register():
     smoke = request.form.get('smoke')
     medications = request.form.get('medications')
     cg_p = request.form['cg_p']
+    cg_p_max = request.form['cg_p_max']
     branch_p = request.form['branch_p']
     smoke_p = request.form.get('smoke_p')
 
     cursor = db.cursor()
     try:
-        cursor.execute('''CREATE TABLE details(email varchar(100) PRIMARY KEY,name varchar(100),branch varchar(100),cg INTEGER,gender varchar(100),age varchar(100),sleeptime varchar(100),wakeup varchar(100),organised INTEGER,social INTEGER,noise INTEGER,smoke INTEGER,medications INTEGER,cg_p INTEGER,branch_p varchar(100),smoke_p INTEGER)''')
+        cursor.execute('''CREATE TABLE details(email varchar(100) PRIMARY KEY,name varchar(100),image varchar(100),branch varchar(100),cg FLOAT(4, 2),gender varchar(100),age varchar(100),sleeptime varchar(100),wakeup varchar(100),organised INTEGER,social varchar(100),noise varchar(100),smoke varchar(100),medications varchar(100),cg_p FLOAT(4, 2),cg_p_max FLOAT(4, 2),branch_p varchar(100),smoke_p varchar(100))''')
     # # db.close()
     # # db = sqlite3.connect('temp.db')
     except sqlite3.OperationalError:
@@ -127,14 +128,95 @@ def register():
         pass
     # cursor = db.cursor()
     cursor.execute(
-        "INSERT into details(email,name,branch,cg,gender,age,sleeptime,wakeup,organised,social,noise,smoke,medications,cg_p,branch_p,smoke_p) VALUES (?, ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (mail, name, branch,cg,gender,age,sleeptime,wakeup,organised,social,noise,social,medications,cg_p,branch_p,smoke_p))
+        "INSERT into details(email,name,image,branch,cg,gender,age,sleeptime,wakeup,organised,social,noise,smoke,medications,cg_p,cg_p_max,branch_p,smoke_p) VALUES (?, ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (mail, name,image,branch,cg,gender,age,sleeptime,wakeup,organised,social,noise,smoke,medications,cg_p,cg_p_max,branch_p,smoke_p))
     db.commit()
     db.close()
-    return "Succesfully submitted"
+    return redirect(url_for('results'))
 
 @app.route('/results')
 def results():
-    
+    global mail
+    db = sqlite3.connect('temp.db')
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM details")
+    res = cursor.fetchall()
+    cursor.execute("SELECT * FROM details WHERE email =?", (mail,))
+    rowdata = cursor.fetchall()
+    lst = []
+    for row in res:
+        if(row[0] == mail):
+            continue
+        if(row[5] != rowdata[0][5]):
+            continue
+        percent = 0
+        if float(row[4]) >= float(rowdata[0][14]) and float(row[4]) <= float(rowdata[0][15]):
+            percent += 20
+        else:
+            if float(row[4]) > float(rowdata[0][15]):
+                diff = float(row[4]) - float(rowdata[0][15])
+            else:
+                diff = float(rowdata[0][14]) - float(row[4])
+            percent += 20 - 3*float(diff)
+        per2 = str(row[7])
+        per1 = str(rowdata[0][7])
+        if(per1[0] == 'A'):
+            x = 16
+        elif(per1[2] == 'A'):
+            x = 12
+        elif(per1[1] == 'A'):
+            x = 13
+        elif(per1[1] == 'P'):
+            x = int(per1[0])
+        elif(per1[2] == 'P'):
+            x = int(per1[0])*10 + int(per1[1])
+        if(per2[0] == 'A'):
+            y = 18
+        elif(per2[2] == 'A'):
+            y = 12
+        elif(per2[1] == 'A'):
+            y = 13
+        elif(per2[1] == 'P'):
+            y = int(per2[0])
+        elif(per2[2] == 'P'):
+            y = int(per2[0])*10 + int(per2[1])
+        percent += 20 - 3*abs(x - y)
+        per2 = str(row[8])
+        per1 = str(rowdata[0][8])
+        if(per1[0] != 'A'):
+            x = int(per1[0])
+        else:
+            x = 11
+        if(per2[0] != 'A'):
+            y = int(per2[0])
+        else:
+            y = 9
+        percent += 20 - 3*abs(x - y)
+        per2 = str(row[12])
+        per1 = str(rowdata[0][17])
+        if(per2 == per1):
+            percent += 20
+        else:
+            percent += 5
+        per2 = str(row[10])
+        per1 = str(rowdata[0][11])
+        if(per1[0] == 'C' and per2[0] == 'S'):
+            percent += 10
+        elif(per1[0] == 'C' and per2[0] == 'N'):
+            percent += 5
+        if(per1[0] == 'N' and per2[0] == 'N'):
+            percent += 10
+        elif(per1[0] == 'N' and per2[0] == 'S'):
+            percent += 5
+        per1 = str(rowdata[0][16])
+        per2 = str(row[3])
+        if(per1 == per2 or per1 == "Any"):
+            percent += 10
+        else:
+            percent += 0
+        new_tup = (percent, ) + row
+        lst.append(new_tup)
+    sorted_list = sorted(lst, key=lambda x:x[0], reverse=True)
+    return sorted_list
 
 if __name__ == "__main__":
-    app.run(debug=True,port="5001")
+    app.run(debug=True)
