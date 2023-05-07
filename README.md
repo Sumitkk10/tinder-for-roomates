@@ -42,19 +42,29 @@
         import sqlite3
      ```
     
-4. Instructions to set up:-
+4. Instructions to set up:
+
     The application can be accessed by running the flask application app.py. The server link obtained will redirect to the homepage of the website from where other pages can be accessed according to the buttons and links present.
+    
   Running this web application on someone else's computer assumes the following conditions:
+  ```
     i) The screen resolution assumed is 1920x1080.
     ii) The operating system used is Ubuntu.
     iii) Flask is installed.
+    iv) Sqlite is installed.
+   ```
 
 5. Contribution of each member to the project:
     ```
     Sumit: 1) Login, Signup, About pages
            2) Flask functionalities in app.py
+           3) Writing the algorithm for match percentage
     Ketaki: 1) Questionnaire page for registration.
             2) Flask functionalities in app.py
+            3) Displaying data from database
     Prabhav: 1) Home and Results pages
              2) Complete designing and integrating it on all pages.
+             3) Adding data in database
     ```
+    
+ 6. We have also attached a short video in the zip file briefing how to use the website.
