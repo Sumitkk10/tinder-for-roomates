@@ -35,8 +35,12 @@
     b) Flask:
     ```
         from flask import Flask, render_template, request, redirect, url_for
-        import sqlite3
     ```
+    
+    c) Sqlite3:
+    ```
+        import sqlite3
+     ```
     
 4. Instructions to set up:-
     The application can be accessed by running the flask application app.py. The server link obtained will redirect to the homepage of the website from where other pages can be accessed according to the buttons and links present.
