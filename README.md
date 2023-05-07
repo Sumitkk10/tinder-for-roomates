@@ -20,7 +20,7 @@
 
     a) Google fonts: 
     
-        * https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch&family=Poly&family=Rajdhani&family=Sigmar&display=swap
+         https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch&family=Poly&family=Rajdhani&family=Sigmar&display=swap
         
     b) Flask:
     ```
