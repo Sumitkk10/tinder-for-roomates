@@ -5,15 +5,25 @@
 1. Name of our web-application: MatchBox
 
 2. A brief summary of the features we have implemented are as follows:
+
     a) Design:
+    
         i) Typewriter text using JS
+        
         ii) Transitions of images on homepage using JS
+        
         iii) Implementing Next and Previous buttons to transition to next rowdata of the database.
+        
         iv) Created a logo for our website.
+        
     b) Other aspects:
+    
         i) Created an algorithm to display the matched percentage of two particular entries.
+        
         ii) We have also included a login and sign-up page so that if the user is not registered is redirected to the form else the matching roommate results are displayed.
+        
     c) Our website displays all the possible roomates of the same gender that a person can have such that with whom he/she has the highest matched percentage is displayed first.
+    
     d) A local database is already present in our codebase to which the entries will be appended.
 
 3. Frameworks and packages used:
