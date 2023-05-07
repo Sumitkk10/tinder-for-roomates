@@ -1,0 +1,58 @@
+body {
+    /* height:100; */
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: antiquewhite;
+}
+.headings{
+    margin-left: 2%;
+    color: aqua;
+}
+label{
+    margin-left: 2%;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.radio_button{
+    margin-left: 0%;
+}
+.radio_button_1{
+    margin-left: 0%;
+    margin-right: 0.5%;
+}
+#textbox{
+    /* padding: 6px 20px; */
+    padding: 5px;
+    margin-left: 0.5%;
+    font-size: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#car{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+}
+#cars{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 1%;
+}
+#ca{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 2%;
+}
+#textbox_cg{
+    /* padding: 6px 20px; */
+    padding: 5px;
+    margin-left:2%;
+    font-size: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#textbox_age{
+    /* padding: 6px 20px; */
+    padding: 5px;
+    margin-left:2%;
+    font-size: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+}

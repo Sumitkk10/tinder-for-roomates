@@ -38,17 +38,16 @@ def loginn():
                 db.close()
                 error = True
                 error_msg = 'Invalid password'
-                return render_template('login.html', error=error, error_msg=error_msg);
+                return render_template('login.html', error=error, error_msg=error_msg)
         else:
-            # put a message for Sign up 
             error = True
             error_msg = 'Email not found'
-            return render_template('login.html', error=error, error_msg=error_msg);
+            return render_template('login.html', error=error, error_msg=error_msg)
     else:
         error = True
         error_msg = 'Email not found'
         db.close()
-        return render_template('login.html', error=error, error_msg=error_msg);
+        return render_template('login.html', error=error, error_msg=error_msg)
 
 @app.route('/signup')
 def signup():
@@ -77,7 +76,7 @@ def signupp():
             cursor.execute("INSERT into members(email, password) VALUES (?, ?)", (mail, password))
             db.commit()
             db.close()
-            return "DATA ADDED"
+            return render_template('form.html')
     else:
         db = sqlite3.connect('temp.db')
         cursor = db.cursor()
@@ -88,8 +87,12 @@ def signupp():
         cursor.execute("INSERT into members(email, password) VALUES (?, ?)", (mail, password))
         db.commit()
         db.close()
-        #redirect to the form page
-        return "DATA ADDED"
+        return render_template('form.html')
+    
+@app.route('/results')
+def results():
+    return "hello"
+    # go to search page with extracted details
 
 if __name__ == "__main__":
     app.run(debug=True)
