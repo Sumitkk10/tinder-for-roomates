@@ -19,7 +19,9 @@
 3. Frameworks and packages used:
 
     a) Google fonts: 
+    
         * https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch&family=Poly&family=Rajdhani&family=Sigmar&display=swap
+        
     b) Flask:
     ```
         from flask import Flask, render_template, request, redirect, url_for
