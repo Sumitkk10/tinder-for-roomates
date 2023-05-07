@@ -52,6 +52,7 @@
     ii) The operating system used is Ubuntu.
     iii) Flask is installed.
     iv) Sqlite is installed.
+    v)  The temp.db database that is already present with a few data entries should to be used when the application running so that there are few profiles          to match with.
    ```
 
 5. Contribution of each member to the project:
