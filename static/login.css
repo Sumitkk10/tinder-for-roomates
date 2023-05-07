@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Castoro+Titling&family=Courier+Prime&display=swap');
+
+body{
+    background-image: url('../static/img/bg.jpg');
+}
+
 .box {
     width: 1000px;
     height: 700px;
-    background-color: black;
+    background-color: #000000aa;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,14 +25,13 @@
     position: absolute;
     top: 20%;
     left: 55%;
-    font-weight: bold;
     transform: translate(0, -50%);
     color: white;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 1.5;
-    width: 250px;
+    width: 300px;
     text-align: justify;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Courier Prime';
 }
 
 .form-container {
@@ -34,9 +39,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-left: 40%;
-    
+
 }
 
 .form-container input[type="email"], .form-container input[type="password"] {
@@ -47,6 +52,9 @@
     width: 100%;
     box-sizing: border-box;
     font-size: 18px;
+    font-family: 'Courier Prime';
+    background-color: rgb(51, 51, 51);
+    color: #fff;
 }
 
 .form-container input[type="email"]:focus, .form-container input[type="password"]:focus {
@@ -65,4 +73,39 @@
 
 .form-container input[type="submit"]:hover {
     background-color: #3e8e41;
+}
+
+footer{
+    margin-top: 906px;
+    position: absolute;
+    float: end;
+    left: 0;
+    right: 0;
+    line-height: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color: #FFFFFFAA;
+}
+
+#home-logo{
+height: 35px;
+}
+
+#home-head{
+font-family: 'Castoro Titling', Arial, sans-serif;
+color: aliceblue;
+font-size: 35px;
+text-align: center;
+margin-top: 10%;
 }
