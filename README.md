@@ -2,7 +2,7 @@
 
 # Project Assigned: Tinder for roommates
 
-1. Name of our web-application: MatchBox
+1. Name of our web-application: ## MatchBox
 
 2. A brief summary of the features we have implemented are as follows:
 
