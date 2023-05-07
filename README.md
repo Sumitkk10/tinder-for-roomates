@@ -1,6 +1,6 @@
-Team 56
-Team Name:
-Project Assigned:Tinder for roommates
+# Team 56
+
+# Project Assigned: Tinder for roommates
 
 1.Name of our web-application:MatchBox
 
