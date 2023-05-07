@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roommate Finder</title>
+</head>
+<body>
+	<h1>Roommate Finder Results</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Branch</th>
+				<th>CGPA</th>
+				<th>Gender</th>
+				<th>Age</th>
+				<th>Sleep Time</th>
+				<th>Wake Up Time</th>
+				<th>Organised</th>
+				<th>Social</th>
+				<th>Noise</th>
+				<th>Smoke</th>
+				<th>Medications</th>
+				<th>Preferred CGPA</th>
+				<th>Preferred Branch</th>
+				<th>Preferred Smoking Habit</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for result in rows %}
+			<tr>
+				<td>{{ result[1] }}</td>
+				<td>{{ result[2] }}</td>
+				<td>{{ result[3] }}</td>
+				<td>{{ result[4] }}</td>
+				<td>{{ result[5] }}</td>
+				<td>{{ result[6] }}</td>
+				<td>{{ result[7] }}</td>
+				<td>{{ result[8] }}</td>
+				<td>{{ result[9] }}</td>
+				<td>{{ result[10] }}</td>
+				<td>{{ result[11] }}</td>
+				<td>{{ result[12] }}</td>
+				<td>{{ result[14] }}</td>
+				<td>{{ result[15] }}</td>
+				<td>{{ result[16] }}</td>
+                <td>{{ result[17] }}</td>
+                <td>{{ result[18] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
