@@ -4,10 +4,10 @@ body{
     background-image: url('../static/img/bg.jpg');
 }
 
-.box {
+.login {
     width: 1000px;
     height: 700px;
-    background-color: #000000aa;
+    background-color: #023b6996;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,8 +29,8 @@ body{
     color: white;
     font-size: 35px;
     line-height: 1.5;
-    width: 300px;
-    text-align: justify;
+    width: 308px;
+    text-align: center;
     font-family: 'Courier Prime';
 }
 
@@ -53,8 +53,8 @@ body{
     box-sizing: border-box;
     font-size: 18px;
     font-family: 'Courier Prime';
-    background-color: rgb(51, 51, 51);
-    color: #fff;
+    background-color: rgb(154, 194, 204);
+    color: #252525;
 }
 
 .form-container input[type="email"]:focus, .form-container input[type="password"]:focus {
@@ -99,7 +99,7 @@ footer a:hover{
 }
 
 #home-logo{
-height: 35px;
+height: 150px;
 }
 
 #home-head{

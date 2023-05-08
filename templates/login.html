@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Login </title>
+        <link rel="icon" href="../static/img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../static/stylesheet.css">
         <link rel="stylesheet" href="../static/login.css">
+        <title> Login </title>
+
+        </style>
     </head>
-    <body bgcolor="lightblue">
-        <div class ="box">
-            <img src = "https://colorlib.com/etc/lf/Login_v1/images/img-01.png", style="width: 350px;">
-            <div class = "text"> Member Login </div>
+    <body>
+        <div class ="login">
+            <img src = "https://colorlib.com/etc/lf/Login_v1/images/img-01.png", style="width: 300px;">
+            <div class = "text"><div id="home-head"><img id="home-logo" src="../static/img/logo3.png"><br></div>&emsp;Member Login</div>
             <form method="POST" action="/loginn" class="form-container">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
@@ -16,8 +20,15 @@
                     <p style="color: red">{{ error_msg }}</p>
                 {% endif %}
                 
-                <input type="submit" value="Log in">
+                <br><br><input type="submit" value="Log in">
             </form>
         </div>
+
+    
     </body>
-</html>
+
+	<footer>
+        <span style="font-family: Courier Prime, Arial;">&#169 2023 &emsp;&emsp;|&emsp;&emsp; <form action="/"> <button id = "prabhav">MatchBox</button>  </form> &emsp;&emsp;|&emsp;&emsp; All rights reserved &emsp;&emsp;|&emsp;&emsp; <form action="/about"> <button id="prabhav"> About Us </button> </form> </span>
+    </footer>
+
+    </html>

@@ -3,19 +3,24 @@
     <head>
         <title> Signup </title>
         <link rel="stylesheet" href="../static/login.css">
+        <link rel="stylesheet" href="../static/stylesheet.css">
     </head>
-    <body bgcolor="lightblue">
-        <div class ="box">
+    <body>
+        <div class ="login">
             <img src = "https://colorlib.com/etc/lf/Login_v1/images/img-01.png", style="width: 350px;">
-            <div class = "text"> Member Signup </div>
+            <div class = "text"><div id="home-head"><img id="home-logo" src="../static/img/logo3.png"></div>&nbsp;Member Signup</div>
             <form method="POST" action="/signupp" class="form-container">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
                 {% if error %}
                     <p style="color: red">{{ error_msg }}</p>
                 {% endif %}
-                <input type="submit" value="Sign Up">
+                <br><br><input type="submit" value="Sign Up">
             </form>
         </div>
     </body>
+	<footer>
+        <span style="font-family: Courier Prime, Arial;">&#169 2023 &emsp;&emsp;|&emsp;&emsp; <form action="/"> <button id = "prabhav">MatchBox</button>  </form> &emsp;&emsp;|&emsp;&emsp; All rights reserved &emsp;&emsp;|&emsp;&emsp; <form action="/about"> <button id="prabhav"> About Us </button> </form> </span>
+    </footer>
+
 </html>
