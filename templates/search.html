@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="../static/img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../static/stylesheet.css">
+        <title>MatchBox | Search Results</title>
+    </head>
+    <body>
+      <div class="box">
+        <img class="profile-pic" src="{{ result[3] }}">
+        <div style="position: absolute; background-color: #d19e10; width: 120px; height: 120px;text-align: center; margin-top: 260px;margin-left: 260px; border-radius: 50%;padding-top: 20px;padding-left: 30px;font-size: 25px;">
+          <div style="font-size: 45px;position: absolute;">{{ result[0]}}%</div><div style="color: rgb(158, 4, 4);margin-top: 60px;position: absolute;"><b> matched</b></div>
+          
+        </div>
+        <div>
+          <form action="/display" method="POST">
+            <input type="hidden" name="current_row" value="{{ current_row }}">
+            <button class="prev" type="submit" name="button" value="previous">◀️</button>
+            <button class="next" type="submit" name="button" value="next">▶️</button>
+          </form>
+        </div>
+        <h1>{{ result[2]}}</h1>
+        <div style="font-size: 35px; margin-left: 420px;">Branch: {{ result[4]}} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; CGPA: {{ result[5]}}</div>
+        <ul style="font-size: 25px; position: absolute; margin-left: 420px; margin-top: 80px; list-style-type: none;">
+          <li>Age: {{ result[7]}}</li>
+          <li>Sleeps at: {{ result[8]}}</li>
+          <li>{{ result[10]}}</li>
+        </ul>
+        <ul style="font-size: 25px; position: absolute; margin-left: 820px; margin-top: 80px; list-style-type: none;">
+          <li>{{ result[13]}}</li>
+          <li>Wakes up at: {{ result[9]}}</li>
+          <li>{{ result[11]}}</li>
+        </ul>
+        
+        <br><br>
+        <div style="background-color: rgb(209, 158, 16); width: 600px; height: 60px; margin-top: 200px;margin-left: 460px;border-radius: 10px;padding-top: 20px;padding-left: 30px;font-size: 25px;">
+          Connect:
+          <a href="mailto:{{ result[2]}}">{{ result[1]}}</a>
+        </div>
+      </div><br><br><br><br>
+      
+	<footer>
+    <span style="font-family: Courier Prime, Arial;">&#169 2023 &emsp;&emsp;|&emsp;&emsp; <form action="/"> <button id = "prabhav">MatchBox</button>  </form> &emsp;&emsp;|&emsp;&emsp; All rights reserved &emsp;&emsp;|&emsp;&emsp; <form action="/about"> <button id="prabhav"> About Us </button> </form> </span>
+</footer>
+
+    </body>
+</html> 

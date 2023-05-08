@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Castoro+Titling&family=Courier+Prime&family=Ysabeau:wght@500&display=swap');
+
+body {
+    /* height:100; */
+    background-image: url(../static/img/bg.jpg);
+    color: antiquewhite;
+}
+.headings{
+    margin-left: 2%;
+    color: aqua;
+}
+label{
+    margin-left: 2%;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.radio_button{
+    margin-left: 0%;
+}
+.radio_button_1{
+    margin-left: 0%;
+    margin-right: 0.5%;
+}
+#textbox{
+    width: 300px;
+    padding: 5px;
+    margin-left: 110px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#car{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    margin-left: 98px;
+}
+#cars{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 1%;
+    border-radius: 8px;
+}
+#ca{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 2%;
+    border-radius: 8px;
+}
+#textbox_cg{
+    width: 100px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 8px;
+    margin-left: 136px;
+}
+
+#textbox_age{
+    width: 100px;
+    margin-left: 127px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 8px;
+}
+form {
+    align-self: center;
+    max-width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #023b6996;
+    border-radius: 10px;
+  }
+
+
+footer{
+	position: absolute;
+	float: end;
+	left: 0;
+	right: 0;
+	line-height: 30px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding-bottom: 5px;
+	font-size: 20px;
+}
+
+footer a{
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover{
+	color: #FFFFFFAA;
+}
+#prabhav{
+    background: none;
+    font-size: 20px;
+    width: 115px;
+    border: none;
+  }
+  #prabhav:hover{
+    color:#807e7e;
+  }
+
+  #buttons{
+    text-align: center;
+    margin-top: 70px;
+  }
+  
+  button{
+    height: 80px;
+    width: 200px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: 'Courier Prime';
+    font-size: 35px;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom right, #ff0000, #e98400);
+  }
+
+
+.sumit {
+    align-self: center;
+    width: 100px;
+    height: 30px;
+    margin: auto;
+    padding: 20px;
+    background: none;
+    
+    border-radius: 10px;
+  }

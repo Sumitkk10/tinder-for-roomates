@@ -1,87 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" href="../static/img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="../static/stylesheet.css">
+        <link rel="stylesheet" href="../static/login.css">
         <title> Login </title>
-        <style>
-            .box {
-                width: 1000px;
-                height: 700px;
-                background-color: black;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                border-radius: 5%;
-                display: flex;
-                align-items: left;
-                justify-content: center;
-                flex-direction: column;
-			    padding: 50px;
-			    box-sizing: border-box;
-            }
 
-            .text {
-                position: absolute;
-                top: 20%;
-                left: 55%;
-                font-weight: bold;
-                transform: translate(0, -50%);
-                color: white;
-                font-size: 35px;
-                line-height: 1.5;
-                width: 250px;
-                text-align: justify;
-                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-		    }
-
-            .form-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                margin-left: 40%;
-                
-            }
-
-            .form-container input[type="email"], .form-container input[type="password"] {
-                padding: 10px;
-                border-radius: 20px;
-                border: none;
-                margin-bottom: 20px;
-                width: 100%;
-                box-sizing: border-box;
-                font-size: 18px;
-            }
-
-            .form-container input[type="email"]:focus, .form-container input[type="password"]:focus {
-                outline: none;
-            }
-
-            .form-container input[type="submit"] {
-                padding: 10px;
-                border-radius: 5px;
-                border: none;
-                background-color: #4CAF50;
-                color: white;
-                cursor: pointer;
-                font-size: 18px;
-            }
-
-            .form-container input[type="submit"]:hover {
-                background-color: #3e8e41;
-            }
         </style>
     </head>
-    <body bgcolor="lightblue">
-        <div class ="box">
-            <img src = "https://colorlib.com/etc/lf/Login_v1/images/img-01.png", style="width: 350px;">
-            <div class = "text"> Member Login </div>
-            <form method="POST" action="/submit" class="form-container">
+    <body>
+        <div class ="login">
+            <img src = "https://colorlib.com/etc/lf/Login_v1/images/img-01.png", style="width: 300px;">
+            <div class = "text"><div id="home-head"><img id="home-logo" src="../static/img/logo3.png"><br></div>&emsp;Member Login</div>
+            <form method="POST" action="/loginn" class="form-container">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
-                <input type="submit" value="Login">
+                
+                {% if error %}
+                    <p style="color: red">{{ error_msg }}</p>
+                {% endif %}
+                
+                <br><br><input type="submit" value="Log in">
             </form>
         </div>
+
+    
     </body>
-</html>
+
+	<footer>
+        <span style="font-family: Courier Prime, Arial;">&#169 2023 &emsp;&emsp;|&emsp;&emsp; <form action="/"> <button id = "prabhav">MatchBox</button>  </form> &emsp;&emsp;|&emsp;&emsp; All rights reserved &emsp;&emsp;|&emsp;&emsp; <form action="/about"> <button id="prabhav"> About Us </button> </form> </span>
+    </footer>
+
+    </html>

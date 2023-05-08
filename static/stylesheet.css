@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Castoro+Titling&family=Courier+Prime&family=Ysabeau:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../static/img/bg.jpg);
+  }
+
+.text1{
+  margin-top: ;
+}
+
+#bg-image {
+  filter: brightness(30%);
+  background-image: url('../static/img/roomies.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+#home-logo{
+  height: 200px;
+  font-family: 'Castoro Titling', Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+#home-head{
+  font-family: 'Castoro Titling', Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+#text{
+  font-family: 'Arvo', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#buttons{
+  text-align: center;
+  margin-top: 70px;
+}
+
+button{
+  height: 80px;
+  width: 200px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: 'Courier Prime';
+  font-size: 35px;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom right, #ff0000, #e98400);
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #5c4a11;
+}
+
+button:hover{
+  filter: brightness(120%);
+}
+
+.container {
+  margin-top: 20%;
+  background-color: #000000dd; 
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}  
+
+footer{
+	position: absolute;
+	float: end;
+	left: 0;
+	right: 0;
+	line-height: 30px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding-bottom: 5px;
+	font-size: 20px;
+}
+
+footer a{
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover{
+	color: #FFFFFFAA;
+}
+  
+form{
+  display: inline-block;
+}
+
+.box{
+  height: 740px;
+  width: 80%;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-top: 100px;
+  background-image: linear-gradient(to bottom right,#11263d99,#31387599);
+  font-family: 'Ysabeau';
+  color: #fff;
+}
+
+.box
+
+.profile-pic{
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 80px;
+  height: 260px;
+  width: 260px;
+  border-radius: 20px; 
+  background-image: url(../static/img/defpic.png); 
+}
+
+h1{
+  padding-top: 70px;
+  margin-left: 420px;
+  font-size: 80px;
+  font-family: 'Arvo';
+}
+
+.prev{
+  position: absolute;
+  background: none;
+  margin-top: 650px;
+  margin-left: 50px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.next{
+  position: absolute;
+  background: none;
+  margin-top: 650px;
+  margin-left: 1360px;
+  margin-right: 50px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+#body-logo{
+  height: 210px;
+  margin-left: 100px;
+  margin-top: 115px;
+  position: absolute;
+}
+.vertical-line {
+  border-left: 1px solid rgb(255, 255, 255);
+  height: 350px;
+  margin-left: 700px;
+  margin-top: 50px;
+  border-width: 2px;
+  position: absolute;
+}
+#text1{
+  color: #fff;
+  font-family: 'Pacifico';
+  font-size: 70px;  
+  margin-top: 100px;
+  margin-left: 830px;
+  position: absolute;
+}
+#review-box{
+  width: 400px;
+  text-align: left ;
+  line-height: 40px;
+  color: #fff;
+  font-family: 'Marck Script';
+  font-size: 30px;  
+  margin-top: 600px;
+  margin-left: 100px;
+  position: absolute;
+}
+#prabhav{
+  background: none;
+  font-size: 20px;
+  width: 115px;
+  border: none;
+}
+#prabhav:hover{
+  color:#807e7e;
+}
