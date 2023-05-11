@@ -26,5 +26,4 @@
    ```
    
  3. Refer the following video to learn how to use MatchBox:
- 4. 
  ![](Intro to Matchbox.gif)
