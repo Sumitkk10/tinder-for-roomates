@@ -1,48 +1,18 @@
-# Team 56
+# MatchBox
 
-# Project Assigned: Tinder for roommates
-
-1. Name of our web-application: **MatchBox**
-
-2. A brief summary of the features we have implemented are as follows:
-
-    a) Design:
-    
-        i) Typewriter text using JS
+1. Frameworks and packages used:
         
-        ii) Transitions of images on homepage using JS
-        
-        iii) Implementing Next and Previous buttons to transition to next rowdata of the database.
-        
-        iv) Created a logo for our website.
-        
-    b) Other aspects:
-    
-        i) Created an algorithm to display the matched percentage of two particular entries.
-        
-        ii) We have also included a login and sign-up page so that if the user is not registered, he/she is redirected to the form else the matching roommate results are displayed directly.
-        
-    c) Our website displays all the possible roomates of the same gender that a person can have such that with whom he/she has the highest matched percentage is displayed first.
-    
-    d) A local database is already present in our codebase to which the entries will be appended.
-
-3. Frameworks and packages used:
-
-    a) Google fonts: 
-    
-         https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch&family=Poly&family=Rajdhani&family=Sigmar&display=swap
-        
-    b) Flask:
+    a) Flask:
     ```
         from flask import Flask, render_template, request, redirect, url_for
     ```
     
-    c) Sqlite3:
+    b) Sqlite3:
     ```
         import sqlite3
      ```
     
-4. Instructions to set up:
+2. Instructions to set up:
 
     The application can be accessed by running the flask application app.py. The server link obtained will redirect to the homepage of the website from where other pages can be accessed according to the buttons and links present.
     
@@ -52,20 +22,7 @@
     ii) The operating system used is Ubuntu.
     iii) Flask is installed.
     iv) Sqlite is installed.
-    v)  The temp.db database that is already present with a few data entries should to be used when the application running so that there are few profiles          to match with.
+    v)  The temp.db database that is already present with a few data entries should to be used when the application running so that there are few profiles to match with.
    ```
-
-5. Contribution of each member to the project:
-    ```
-    Sumit: 1) Login, Signup, About pages
-           2) Flask functionalities in app.py
-           3) Writing the algorithm for match percentage
-    Ketaki: 1) Questionnaire page for registration.
-            2) Flask functionalities in app.py
-            3) Displaying data from database
-    Prabhav: 1) Home and Results pages
-             2) Complete designing and integrating it on all pages.
-             3) Adding data in database
-    ```
-    
- 6. We have also attached a short video in the zip file briefing how to use the website.
+   
+ 3. Refer the following video to learn how to use MatchBox
