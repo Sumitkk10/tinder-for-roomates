@@ -25,5 +25,5 @@
     *  The temp.db database that is already present with a few data entries should to be used when the application running so that there are few profiles to match with.
    ```
    
- 3. Refer the following video to learn how to use MatchBox:
+ 3. Refer the following video to learn how to use MatchBox :
  ![](Intro to Matchbox.gif)
