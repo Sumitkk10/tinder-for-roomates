@@ -3,14 +3,12 @@
 1. Frameworks and packages used:
         
     * Flask:
-    ```
-        from flask import Flask, render_template, request, redirect, url_for
-    ```
+        
+        `from flask import Flask, render_template, request, redirect, url_for`
     
     * Sqlite3:
-    ```
-        import sqlite3
-     ```
+
+       `import sqlite3`
     
 2. Instructions to set up:
 
